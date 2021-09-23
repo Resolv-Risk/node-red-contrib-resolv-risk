@@ -21,12 +21,13 @@ module.exports = function (RED) {
         msg.payload = {}
       }
 
-      const {
+      let {
         cpf,
         nome,
         nm_mae,
         dt_nasc: dt_nsct
       } = msg.input
+      dt_nsct = dt_nsct ? dt_nsct : "";
       const payload = {
         cpf,
         nome,
